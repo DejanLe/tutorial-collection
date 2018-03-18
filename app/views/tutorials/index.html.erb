@@ -1,7 +1,7 @@
 <div class="tut-page">
   <div class="container">
     <div class="row">
-      <div class="col-md-12 mx-auto">
+      <div class="col-md-3 mx-auto">
         <h1>Tutorials</h1>
         <%= form_with model: Tutorial.new, data: {'js-tutorial-form' => true} do |form| %>
           Title <%= form.text_field :title, class: 'form-control', placeholder: 'add title', required: ''%><br>
@@ -9,14 +9,17 @@
           <%= form.submit class: 'btn btn-primary' %>
         <% end %>
         <br>
-        <h3>Latest tutorials</h3>
-        <ol id=tutorials>
-          <%= render @tutorials %>
-        </ol>
+
 
         <br>
         <hr>
 
+      </div>
+      <div class="col-md-9">
+        <h3>Latest tutorials</h3>
+        <ol id=tutorials>
+          <%= render @tutorials %>
+        </ol>
       </div>
     </div>
   </div>

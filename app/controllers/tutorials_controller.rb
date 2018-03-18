@@ -1,6 +1,6 @@
 class TutorialsController < ApplicationController
   def index
-    @tutorials = Tutorial.all
+    @tutorials = Tutorial.all.order("created_at DESC")
   end
   def create
     @tutorial = Tutorial.new(params[:tutorial].permit(:title, :url))
@@ -8,7 +8,7 @@ class TutorialsController < ApplicationController
       render partial: "tutorial", locals: {tutorial: @tutorial}
     end
   end
-   
+
   def destroy
     @tutorial = Tutorial.find(params[:id])
     @tutorial.destroy

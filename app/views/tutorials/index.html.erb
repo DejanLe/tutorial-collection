@@ -1,0 +1,22 @@
+<div class="tut-page">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 mx-auto">
+        <h1>Tutorials</h1>
+        <%= form_with model: Tutorial.new, data: {'js-tutorial-form' => true} do |form| %>
+          Title <%= form.text_field :title, class: 'form-control', placeholder: 'add title', required: ''%><br>
+          URL <%= form.text_field :url, class: 'form-control', placeholder: 'add your tutorials URL', required: '' %><br>
+          <%= form.submit class: 'btn btn-primary' %>
+        <% end %>
+
+        <ul id=tutorials>
+          <%= render @tutorials %>
+        </ul>
+
+        <br>
+        <hr>
+
+      </div>
+    </div>
+  </div>
+</div>

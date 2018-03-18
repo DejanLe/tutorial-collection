@@ -4,3 +4,27 @@
 body{
     font-family: 'Playfair Display', serif !important;
 }
+.card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #41666e !important;
+    background-clip: border-box;
+    border: 1px solid rgba(0, 0, 0, 0.125);
+    border-radius: 0.25rem;
+    color: #fff;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+}
+a {
+    color: #87e98c !important;
+    transition: all 0.5s !important;
+    text-decoration: none;
+    background-color: transparent;
+    -webkit-text-decoration-skip: objects;
+}
+a:hover{
+  color: #888;
+}
